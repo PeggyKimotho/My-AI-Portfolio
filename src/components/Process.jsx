@@ -4,7 +4,7 @@ function Process() {
   const processSteps = [
     {
       number: '01',
-      title: 'Discovery',
+      title: 'Audit',
       icon: <Search className="w-8 h-8" />,
       description: 'We analyze your current workflows to identify automation opportunities and pain points. I take time to understand your business, goals, and challenges.'
     },
