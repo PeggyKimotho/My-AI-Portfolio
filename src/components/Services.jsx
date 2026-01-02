@@ -14,29 +14,16 @@ function Services() {
     },
     {
       icon: <Target className="w-10 h-10" />,
-      title: "Content Workflows",
-      description: "Automate content publishing, scheduling, and analytics tracking across all your platforms to maintain consistent presence."
+      title: "Digital Marketing",
+      description: "Create, publish, and track content through streamlined workflows that keep your marketing consistent."
     },
-    {
-      icon: <Calendar className="w-10 h-10" />,
-      title: "Calendar & Scheduling",
-      description: "Eliminate scheduling back-and-forth with automated calendar management, meeting coordination, and reminder systems."
-    },
+    
     {
       icon: <Rocket className="w-10 h-10" />,
       title: "Course Management",
       description: "Automate course delivery, student management, and community engagement for seamless learning experiences."
     },
-    {
-      icon: <MessageCircle className="w-10 h-10" />,
-      title: "AI Assistants & Chatbots",
-      description: "Deploy intelligent chatbots that handle customer queries, support, and engagement 24/7 without human intervention."
-    },
-    {
-      icon: <BarChart className="w-10 h-10" />,
-      title: "Financial Automation",
-      description: "Automate invoicing, expense tracking, financial reporting, and payment reminders to keep your finances organized."
-    },
+    
     {
       icon: <Briefcase className="w-10 h-10" />,
       title: "Team Workflow Management",
@@ -58,11 +45,11 @@ function Services() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            What I Do
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 bg-clip-text text-transparent">
+            What I Help You Automate
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            I design and build reliable automation systems that save you time and streamline your operations
+            If it’s repetitive, manual, or depends too much on you, it can probably be automated.
           </p>
         </div>
 
@@ -71,15 +58,15 @@ function Services() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/10"
+              className="group bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-fuchsia-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-500/10"
             >
               {/* Icon */}
-              <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-fuchsia-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
               
               {/* Title */}
-              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
+              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-fuchsia-500 transition-colors duration-300">
                 {service.title}
               </h3>
               
@@ -95,7 +82,7 @@ function Services() {
         <div className="text-center mt-12">
           <a 
             href="#contact"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-opacity duration-300 hover:shadow-lg hover:shadow-cyan-400/50"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-opacity duration-300 hover:shadow-lg hover:shadow-fuchsia-500/50"
           >
             Let's Automate Your Business
           </a>

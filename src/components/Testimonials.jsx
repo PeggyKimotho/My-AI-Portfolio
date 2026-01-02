@@ -38,7 +38,7 @@ function Testimonials() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 bg-clip-text text-transparent">
             What Clients Say
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
@@ -51,10 +51,10 @@ function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="group bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/20 relative"
+              className="group bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-fuchsia-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-500/20 relative"
             >
               {/* Quote Icon */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-fuchsia-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
                 <Quote className="w-6 h-6 text-slate-950" />
               </div>
 
@@ -76,13 +76,13 @@ function Testimonials() {
               {/* Client Info */}
               <div className="flex items-center gap-4 pt-4 border-t border-slate-800">
                 {/* Avatar */}
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-2xl flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-500 to-blue-500 flex items-center justify-center text-2xl flex-shrink-0">
                   {testimonial.avatar}
                 </div>
 
                 {/* Name and Title */}
                 <div>
-                  <p className="font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  <p className="font-bold text-white group-hover:text-fuchsia-500 transition-colors duration-300">
                     {testimonial.name}
                   </p>
                   <p className="text-sm text-slate-400">
@@ -100,19 +100,19 @@ function Testimonials() {
         {/* Trust Badges / Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-cyan-400 mb-2">50+</p>
+            <p className="text-4xl font-bold text-fuchsia-500 mb-2">50+</p>
             <p className="text-slate-400 text-sm">Happy Clients</p>
           </div>
           <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-cyan-400 mb-2">100%</p>
+            <p className="text-4xl font-bold text-fuchsia-500 mb-2">100%</p>
             <p className="text-slate-400 text-sm">Satisfaction Rate</p>
           </div>
           <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-cyan-400 mb-2">1000+</p>
+            <p className="text-4xl font-bold text-fuchsia-500 mb-2">1000+</p>
             <p className="text-slate-400 text-sm">Hours Automated</p>
           </div>
           <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-cyan-400 mb-2">4.9/5</p>
+            <p className="text-4xl font-bold text-fuchsia-500 mb-2">4.9/5</p>
             <p className="text-slate-400 text-sm">Average Rating</p>
           </div>
         </div>
@@ -124,7 +124,7 @@ function Testimonials() {
           </p>
           <a 
             href="#contact"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-opacity duration-300 hover:shadow-lg hover:shadow-cyan-400/50"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-opacity duration-300 hover:shadow-lg hover:shadow-fuchsia-500/50"
           >
             Start Your Success Story
           </a>

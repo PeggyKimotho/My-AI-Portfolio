@@ -12,9 +12,9 @@ function Navbar() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Process', href: '#process' },
+    /*{ name: 'Process', href: '#process' },*/
     { name: 'Projects', href: '#projects' },
-    { name: 'Testimonials', href: '#testimonials' },
+    /*{ name: 'Testimonials', href: '#testimonials' }, */
     { name: 'Contact', href: '#contact' }
   ]
 
@@ -26,7 +26,7 @@ function Navbar() {
           {/* Logo */}
           <a 
             href="#home" 
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent tracking-wide hover:opacity-80 transition-opacity"
+            className="text-2xl font-bold bg-gradient-to-r from-fuchsia-500 to-blue-500 bg-clip-text text-transparent tracking-wide hover:opacity-80 transition-opacity"
           >
             Peggy Kimotho
           </a>
@@ -37,10 +37,10 @@ function Navbar() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 relative group inline-block"
+                  className="text-slate-300 hover:text-fuchsia-500 transition-colors duration-300 relative group inline-block"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fuchsia-500 group-hover:w-full transition-all duration-300"></span>
                 </a>
               </li>
             ))}
@@ -49,7 +49,7 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-slate-300 hover:text-cyan-400 transition-colors p-2"
+            className="md:hidden text-slate-300 hover:text-fuchsia-500 transition-colors p-2"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -69,7 +69,7 @@ function Navbar() {
               <a
                 href={link.href}
                 onClick={toggleMenu}
-                className="block text-slate-300 hover:text-cyan-400 hover:pl-2 transition-all duration-300"
+                className="block text-slate-300 hover:text-fuchsia-500 hover:pl-2 transition-all duration-300"
               >
                 {link.name}
               </a>

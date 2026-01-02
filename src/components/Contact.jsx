@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, Linkedin, Instagram, MessageCircle, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { FaLinkedinIn, FaInstagram, FaTiktok } from 'react-icons/fa';
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -22,7 +24,7 @@ function Contact() {
     // Create mailto link with form data
     const subject = `Portfolio Contact from ${formData.name}`
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
-    window.location.href = `mailto:peggyautomates@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:peggyassists@gmail.com?subject=${subject}&body=${body}`
     
     // Show success message
     setIsSubmitted(true)
@@ -37,23 +39,21 @@ function Contact() {
   return (
     <section 
       id="contact" 
-      className="py-8 px-4 bg-slate-950"
+      className="py-8 px-4 bg-slate-900/50"
     >
       <div className="max-w-6xl mx-auto">
         
         {/* Main CTA Box */}
-        <div className="bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-purple-500/10 border border-cyan-400/30 rounded-3xl p-8 md:p-12 mb-8">
+        <div className="bg-gradient-to-br from-fuchsia-500/10 via-blue-500/10 to-fuchsia-500/10 border border-fuchsia-500/30 rounded-3xl p-8 md:p-12 mb-8">
           
           {/* Header */}
           <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-fuchsia-500 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent">
               Ready to Automate?
             </h2>
-            <p className="text-xl md:text-2xl text-slate-300 mb-2">
-              Let's save you 20+ hours per week.
-            </p>
+            
             <p className="text-slate-400">
-              Get in touch today and transform your business operations.
+              Let's transform your business operations.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-500/20 transition-all duration-300"
                       placeholder="John Doe"
                     />
                   </div>
@@ -101,7 +101,7 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-500/20 transition-all duration-300"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -117,14 +117,14 @@ function Contact() {
                       onChange={handleChange}
                       required
                       rows="5"
-                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 resize-none"
-                      placeholder="Tell me about your automation needs..."
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-500/20 transition-all duration-300 resize-none"
+                      placeholder="Tell me about your automation/operations needs..."
                     ></textarea>
                   </div>
 
                   <button
                     onClick={handleSubmit}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 flex items-center justify-center gap-2 group"
+                    className="w-full px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:shadow-fuchsia-500/50 flex items-center justify-center gap-2 group"
                   >
                     <span>Send Message</span>
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -140,17 +140,17 @@ function Contact() {
               <div className="space-y-6">
                 {/* Email */}
                 <a 
-                  href="mailto:peggyautomates@gmail.com"
-                  className="flex items-start gap-4 p-4 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-cyan-400 transition-all duration-300 group"
+                  href="mailto:peggyassists@gmail.com"
+                  className="flex items-start gap-4 p-4 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-fuchsia-500 transition-all duration-300 group"
                 >
-                  <div className="p-3 bg-cyan-400/10 rounded-lg group-hover:bg-cyan-400/20 transition-colors duration-300">
-                    <Mail className="w-6 h-6 text-cyan-400" />
+                  <div className="p-3 bg-fuchsia-500/10 rounded-lg group-hover:bg-fuchsia-500/20 transition-colors duration-300">
+                    <Mail className="w-6 h-6 text-fuchsia-500" />
                   </div>
                   <div>
-                    <p className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                    <p className="font-semibold text-white group-hover:text-fuchsia-500 transition-colors duration-300">
                       Email
                     </p>
-                    <p className="text-slate-400">peggyautomates@gmail.com</p>
+                    <p className="text-slate-400">peggyassists@gmail.com</p>
                   </div>
                 </a>
 
@@ -159,13 +159,13 @@ function Contact() {
                   href="https://wa.me/+254741031210"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-4 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-cyan-400 transition-all duration-300 group"
+                  className="flex items-start gap-4 p-4 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-fuchsia-500 transition-all duration-300 group"
                 >
-                  <div className="p-3 bg-cyan-400/10 rounded-lg group-hover:bg-cyan-400/20 transition-colors duration-300">
-                    <Phone className="w-6 h-6 text-cyan-400" />
+                  <div className="p-3 bg-fuchsia-500/10 rounded-lg group-hover:bg-fuchsia-500/20 transition-colors duration-300">
+                    <Phone className="w-6 h-6 text-fuchsia-500" />
                   </div>
                   <div>
-                    <p className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                    <p className="font-semibold text-white group-hover:text-fuchsia-500 transition-colors duration-300">
                       WhatsApp
                     </p>
                     <p className="text-slate-400">+254 741031210</p>
@@ -178,31 +178,34 @@ function Contact() {
                     Connect on Social Media
                   </p>
                   <div className="flex gap-4">
+
+                    <a
+                      href="https://www.instagram.com/peggyassists/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-fuchsia-500 hover:bg-fuchsia-500/10 transition-all duration-300 group"
+                    >
+                      <FaInstagram className="w-6 h-6 text-slate-400 group-hover:text-fuchsia-500 transition-colors duration-300" />
+                    </a>
+
                     <a
                       href="https://www.linkedin.com/in/peggykimotho/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 group"
+                      className="p-3 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-fuchsia-500 hover:bg-fuchsia-500/10 transition-all duration-300 group"
                     >
-                      <Linkedin className="w-6 h-6 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300" />
+                      <FaLinkedinIn className="w-6 h-6 text-slate-400 group-hover:text-fuchsia-500 transition-colors duration-300" />
                     </a>
 
-                    <a
-                      href="https://www.instagram.com/peggyautomates/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 group"
-                    >
-                      <Instagram className="w-6 h-6 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300" />
-                    </a>
+                
 
                     <a
-                      href="https://www.tiktok.com/@she.automates"
+                      href="https://www.tiktok.com/@peggyassists"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 group"
+                      className="p-3 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-fuchsia-500 hover:bg-fuchsia-500/10 transition-all duration-300 group"
                     >
-                      <MessageCircle className="w-6 h-6 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300" />
+                      <FaTiktok className="w-6 h-6 text-slate-400 group-hover:text-fuchsia-500 transition-colors duration-300" />
                     </a>
                   </div>
                 </div>

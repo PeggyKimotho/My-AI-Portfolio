@@ -18,10 +18,7 @@ function App() {
       <About />
       <Services />
       <Tools />
-      <Process />
       <Projects />
-      <Testimonials />
-      <FAQ />
       <Contact />
       <Footer />
     </div>

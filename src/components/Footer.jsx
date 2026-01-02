@@ -22,10 +22,10 @@ function Footer() {
 
           {/* Optional: Legal Links */}
           <div className="flex gap-6 text-sm">
-            <a href="#privacy" className="text-slate-500 hover:text-cyan-400 transition-colors duration-300">
+            <a href="#privacy" className="text-slate-500 hover:text-fuchsia-500 transition-colors duration-300">
               Privacy Policy
             </a>
-            <a href="#terms" className="text-slate-500 hover:text-cyan-400 transition-colors duration-300">
+            <a href="#terms" className="text-slate-500 hover:text-fuchsia-500 transition-colors duration-300">
               Terms of Service
             </a>
           </div>

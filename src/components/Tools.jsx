@@ -31,7 +31,7 @@ function Tools() {
       name: 'Make', 
       logo: <SiMake className="w-12 h-12" />, 
       description: 'Integration Platform',
-      color: 'text-purple-400'
+      color: 'text-fuchsia-500'
     },
     { 
       name: 'Zapier', 
@@ -76,12 +76,19 @@ function Tools() {
       description: 'CRM Platform',
       color: 'text-orange-500'
     },
-    { 
+        { 
       name: 'GoHighLevel', 
-      logo: <Rocket className="w-12 h-12" />, 
+      logo: (
+        <img 
+          src="logos/gohighlevel-logo.png" 
+          alt="GoHighLevel" 
+          className="w-12 h-12 object-contain"
+        />
+      ),
       description: 'Marketing Suite',
-      color: 'text-green-400'
+      color: '' // Remove text color since image has its own colors
     },
+
     { 
       name: 'Salesforce', 
       logo: <SiSalesforce className="w-12 h-12" />, 
@@ -92,7 +99,7 @@ function Tools() {
       name: 'Slack', 
       logo: <SiSlack className="w-12 h-12" />, 
       description: 'Team Communication',
-      color: 'text-purple-500'
+      color: 'text-fuchsia-500'
     }
   ];
 
@@ -105,7 +112,7 @@ function Tools() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 bg-clip-text text-transparent">
             Tools & Technologies
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
@@ -118,15 +125,15 @@ function Tools() {
           {tools.map((tool, index) => (
             <div 
               key={index}
-              className="group bg-slate-900 p-4 rounded-lg border border-slate-800 hover:border-cyan-400 transition-all duration-300 flex flex-col items-center justify-center text-center hover:transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-400/20 cursor-pointer"
+              className="group bg-slate-900 p-4 rounded-lg border border-slate-800 hover:border-fuchsia-500 transition-all duration-300 flex flex-col items-center justify-center text-center hover:transform hover:scale-110 hover:shadow-lg hover:shadow-fuchsia-500/20 cursor-pointer"
             >
               {/* Logo/Icon */}
-              <div className={`${tool.color} mb-2 group-hover:scale-110 transition-transform duration-300 group-hover:text-cyan-400`}>
+              <div className={`${tool.color} mb-2 group-hover:scale-110 transition-transform duration-300 group-hover:text-fuchsia-500`}>
                 {tool.logo}
               </div>
               
               {/* Tool Name */}
-              <h3 className="text-sm font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300">
+              <h3 className="text-sm font-bold text-white mb-1 group-hover:text-fuchsia-500 transition-colors duration-300">
                 {tool.name}
               </h3>
               

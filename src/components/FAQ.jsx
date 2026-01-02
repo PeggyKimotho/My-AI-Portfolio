@@ -60,10 +60,10 @@ function FAQ() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block p-4 bg-cyan-400/10 rounded-full mb-4">
-            <HelpCircle className="w-12 h-12 text-cyan-400" />
+          <div className="inline-block p-4 bg-fuchsia-500/10 rounded-full mb-4">
+            <HelpCircle className="w-12 h-12 text-fuchsia-500" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 bg-clip-text text-transparent">
             Frequently Asked Questions
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
@@ -76,18 +76,18 @@ function FAQ() {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden hover:border-cyan-400 transition-colors duration-300"
+              className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden hover:border-fuchsia-500 transition-colors duration-300"
             >
               {/* Question Button */}
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full p-6 text-left flex justify-between items-center gap-4 hover:bg-slate-800/50 transition-colors duration-300 group"
               >
-                <span className="font-bold text-lg text-white group-hover:text-cyan-400 transition-colors duration-300">
+                <span className="font-bold text-lg text-white group-hover:text-fuchsia-500 transition-colors duration-300">
                   {faq.question}
                 </span>
                 <ChevronDown 
-                  className={`w-6 h-6 text-cyan-400 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-fuchsia-500 flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
