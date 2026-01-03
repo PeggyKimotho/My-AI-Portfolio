@@ -1,8 +1,58 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [typewriterText, setTypewriterText] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [cycleCount, setCycleCount] = useState(0)
+  const [isTypingComplete, setIsTypingComplete] = useState(false)
+
+  const roles = [
+    'AI Automation Specialist',
+    'Virtual Assistant',
+  ]
+
+  const finalText = 'AI Automation Specialist | Virtual Assistant'
+  const maxCycles = 1
+
+  useEffect(() => {
+    if (isTypingComplete) {
+      setTypewriterText(finalText)
+      return
+    }
+
+    const currentRole = roles[currentIndex]
+
+    if (typewriterText.length < currentRole.length) {
+      const timeout = setTimeout(() => {
+        setTypewriterText(
+          currentRole.slice(0, typewriterText.length + 1)
+        )
+      }, 100)
+
+      return () => clearTimeout(timeout)
+    } else {
+      const timeout = setTimeout(() => {
+        const nextIndex = (currentIndex + 1) % roles.length
+
+        if (nextIndex === 0) {
+          const newCycleCount = cycleCount + 1
+          setCycleCount(newCycleCount)
+
+          if (newCycleCount >= maxCycles) {
+            setIsTypingComplete(true)
+            return
+          }
+        }
+
+        setTypewriterText('')
+        setCurrentIndex(nextIndex)
+      }, 2000)
+
+      return () => clearTimeout(timeout)
+    }
+  }, [typewriterText, currentIndex, cycleCount, isTypingComplete])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -12,23 +62,34 @@ function Navbar() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    /*{ name: 'Process', href: '#process' },*/
+    { name: 'Process', href: '#process' },
     { name: 'Projects', href: '#projects' },
-    /*{ name: 'Testimonials', href: '#testimonials' }, */
-    { name: 'Contact', href: '#contact' }
+    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Contact', href: '#contact' },
   ]
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-slate-950/95 backdrop-blur-sm border-b border-slate-800 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           
           {/* Logo */}
-          <a 
-            href="#home" 
-            className="text-2xl font-bold bg-gradient-to-r from-fuchsia-500 to-blue-500 bg-clip-text text-transparent tracking-wide hover:opacity-80 transition-opacity"
-          >
-            Peggy Kimotho
+          <a href="#home" className="font-bold hover:opacity-80 transition-opacity">
+            <div className="flex flex-col">
+              <span className="text-lg md:text-xl bg-gradient-to-r from-fuchsia-500 to-purple-600 bg-clip-text text-transparent">
+                Peggy Kimotho
+              </span>
+              <div className="flex items-center gap-1">
+                <span className="text-xs md:text-sm text-slate-400">
+                  {typewriterText}
+                </span>
+                {!isTypingComplete && (
+                  <span className="text-fuchsia-500 animate-pulse text-xs md:text-sm">
+                    |
+                  </span>
+                )}
+              </div>
+            </div>
           </a>
 
           {/* Desktop Menu */}
