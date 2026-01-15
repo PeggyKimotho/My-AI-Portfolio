@@ -22,7 +22,7 @@ function Hero() {
 
         {/* Qualifier Line */}
         <p className="text-base text-slate-400 mb-10 italic">
-          For coaches, consultants, solopreneurs, agencies, and small teams ready to scale without burnout.
+          For coaches, consultants, solopreneurs, agencies and small teams ready to scale without burnout.
         </p>
 
         {/* CTA Button */}

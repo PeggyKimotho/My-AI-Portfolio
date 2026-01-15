@@ -5,26 +5,17 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [typewriterText, setTypewriterText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [cycleCount, setCycleCount] = useState(0)
-  const [isTypingComplete, setIsTypingComplete] = useState(false)
 
   const roles = [
     'AI Automation Specialist',
     'Virtual Assistant',
   ]
 
-  const finalText = 'AI Automation Specialist | Virtual Assistant'
-  const maxCycles = 1
-
   useEffect(() => {
-    if (isTypingComplete) {
-      setTypewriterText(finalText)
-      return
-    }
-
     const currentRole = roles[currentIndex]
 
     if (typewriterText.length < currentRole.length) {
+      // Typing forward
       const timeout = setTimeout(() => {
         setTypewriterText(
           currentRole.slice(0, typewriterText.length + 1)
@@ -33,26 +24,15 @@ function Navbar() {
 
       return () => clearTimeout(timeout)
     } else {
+      // Pause, then switch role
       const timeout = setTimeout(() => {
-        const nextIndex = (currentIndex + 1) % roles.length
-
-        if (nextIndex === 0) {
-          const newCycleCount = cycleCount + 1
-          setCycleCount(newCycleCount)
-
-          if (newCycleCount >= maxCycles) {
-            setIsTypingComplete(true)
-            return
-          }
-        }
-
         setTypewriterText('')
-        setCurrentIndex(nextIndex)
+        setCurrentIndex((currentIndex + 1) % roles.length)
       }, 2000)
 
       return () => clearTimeout(timeout)
     }
-  }, [typewriterText, currentIndex, cycleCount, isTypingComplete])
+  }, [typewriterText, currentIndex])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -62,9 +42,7 @@ function Navbar() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Process', href: '#process' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -83,11 +61,9 @@ function Navbar() {
                 <span className="text-xs md:text-sm text-slate-400">
                   {typewriterText}
                 </span>
-                {!isTypingComplete && (
-                  <span className="text-fuchsia-500 animate-pulse text-xs md:text-sm">
-                    |
-                  </span>
-                )}
+                <span className="text-fuchsia-500 animate-pulse text-xs md:text-sm">
+                  |
+                </span>
               </div>
             </div>
           </a>
