@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex flex-col justify-center items-center px-4 pt-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
+      className="min-h-screen flex flex-col justify-center items-center px-4 pt-32 pb-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
     >
       <div className="text-center max-w-4xl">
 
@@ -26,8 +26,8 @@ function Hero() {
         </p>
 
         {/* CTA Button */}
-        
-          <a href="#projects"
+        <a 
+          href="#projects"
           className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-bold rounded-lg hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:shadow-fuchsia-500/50 hover:scale-105 mb-12"
         >
           <span>View My Work</span>
@@ -36,8 +36,8 @@ function Hero() {
 
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-10">
-          
-            <a href="https://www.linkedin.com/in/peggykimotho/"
+          <a 
+            href="https://www.linkedin.com/in/peggykimotho/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 hover:scale-110"
@@ -46,8 +46,8 @@ function Hero() {
             <FaLinkedinIn className="w-8 h-8" />
           </a>
 
-          
-            <a href="https://www.instagram.com/peggyassists/"
+          <a 
+            href="https://www.instagram.com/peggyassists/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 hover:scale-110"
@@ -56,8 +56,8 @@ function Hero() {
             <FaInstagram className="w-8 h-8" />
           </a>
 
-          
-            <a href="https://www.tiktok.com/@peggyassists"
+          <a 
+            href="https://www.tiktok.com/@peggyassists"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 hover:scale-110"
@@ -68,8 +68,8 @@ function Hero() {
         </div>
 
         {/* Scroll Down Indicator */}
-        
-          <a href="#about"
+        <a 
+          href="#about"
           className="inline-block animate-bounce"
           aria-label="Scroll to About section"
         >
