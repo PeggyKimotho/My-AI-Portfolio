@@ -5,7 +5,7 @@ function Services() {
     {
       icon: <Zap className="w-10 h-10" />,
       title: "Lead Capture & Nurturing",
-      description: "Automate your lead generation, follow-ups, and nurturing sequences to convert more prospects into clients effortlessly."
+      description: "Automate your lead generation, follow-ups and nurturing sequences to convert more prospects into clients effortlessly."
     },
     {
       icon: <Users className="w-10 h-10" />,

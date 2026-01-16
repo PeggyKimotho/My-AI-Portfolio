@@ -91,7 +91,7 @@ function Projects() {
             Featured Projects
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Real automation systems delivering measurable results for real clients
+            Real automation systems delivering measurable results for clients
           </p>
         </div>
 
