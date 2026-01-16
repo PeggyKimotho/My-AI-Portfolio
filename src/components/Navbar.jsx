@@ -58,7 +58,7 @@ function Navbar() {
                 Peggy Kimotho
               </span>
               <div className="flex items-center gap-1">
-                <span className="text-xs md:text-sm text-slate-400">
+                <span className="text-xs md:text-sm text-white">
                   {typewriterText}
                 </span>
                 <span className="text-fuchsia-500 animate-pulse text-xs md:text-sm">
