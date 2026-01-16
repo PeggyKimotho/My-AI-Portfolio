@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex flex-col justify-center items-center px-4 pt-15 md:pt-32 pb-8 md:pb-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
+      className="min-h-screen flex flex-col justify-center items-center px-4 pt-15 md:pt-32 pb-2 md:pb-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
     >
       <div className="text-center max-w-4xl">
 
