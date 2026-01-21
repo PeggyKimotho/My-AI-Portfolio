@@ -3,46 +3,45 @@ import { Star, Quote } from 'lucide-react'
 function Testimonials() {
   const testimonials = [
     {
-      text: "Peggy transformed our workflow completely. We're now saving 25+ hours every week on tasks that used to drain our energy. Her automation systems are reliable, well-documented, and exactly what we needed to scale our operations.",
-      name: "Sarah Mitchell",
-      title: "Founder, Growth Marketing Agency",
-      company: "ScaleUp Marketing",
+      name: "Susan Wanjiku",
+      title: "The Legacy Hub",
+      company: "Finance Coach",
+      videoId: "6etX3az9e00",
       rating: 5,
-      avatar: "👩‍💼"
+      photo: "/images/AI Automation Specialist in Kenya & Virtual Assistant in Kenya.png" // add your image path
     },
     {
-      text: "Working with Peggy was seamless from start to finish. She understood our needs immediately and delivered a CRM automation system that's been running flawlessly for months. The ROI was evident within the first two weeks. Highly recommend!",
-      name: "James Chen",
-      title: "CEO",
-      company: "TechFlow SaaS",
+      name: "Shaquana Harkness",
+      title: "Dollars Makes Cents",
+      company: "Finance Coach",
+      videoId: "1fCE2TFmYDA",
       rating: 5,
-      avatar: "👨‍💼"
+      photo: "/images/AI Automation Specialist in Kenya n Virtual Assistant in Kenya.png"
     },
     {
-      text: "The lead nurturing automation Peggy built increased our conversion rate by 2x. Her attention to detail and expertise in automation tools is impressive. She didn't just build a system, she taught us how to maintain and optimize it.",
-      name: "Maria Rodriguez",
-      title: "Business Coach & Consultant",
-      company: "Elevate Coaching",
+      name: "Esther Wanjiku",
+      title: "Wanjiku Socials",
+      company: "Content Marketing Coach",
+      videoId: "SV-LpKLSIZg",
       rating: 5,
-      avatar: "👩‍🏫"
+      photo: "/images/AI Automation Specialist in Kenya and Virtual Assistant in Kenya.png"
     },
-    
   ]
 
   return (
     <section 
       id="testimonials" 
-      className="py-20 px-4 bg-slate-950"
+      className="py-20 px-4 bg-slate-900/50"
     >
       <div className="max-w-6xl mx-auto">
         
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 bg-clip-text text-transparent">
-            What Clients Say
+            Client Reviews
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Real feedback from real clients who've transformed their businesses with automation
+            What Founders Say About Working With Me
           </p>
         </div>
 
@@ -51,15 +50,24 @@ function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="group bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-fuchsia-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-500/20 relative"
+              className="group bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-fuchsia-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-500/20"
             >
-              {/* Quote Icon */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-fuchsia-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                <Quote className="w-6 h-6 text-slate-950" />
+              {/* YouTube Video Embed */}
+              <div className="mb-4 rounded-lg overflow-hidden border border-slate-800">
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${testimonial.videoId}`}
+                    title={`${testimonial.name} testimonial`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
 
               {/* Star Rating */}
-              <div className="flex mb-4 gap-1">
+              <div className="flex mb-4 gap-1 justify-center">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star 
                     key={i} 
@@ -68,16 +76,16 @@ function Testimonials() {
                 ))}
               </div>
 
-              {/* Testimonial Text */}
-              <p className="text-slate-300 mb-6 leading-relaxed italic relative">
-                "{testimonial.text}"
-              </p>
-
               {/* Client Info */}
               <div className="flex items-center gap-4 pt-4 border-t border-slate-800">
-                {/* Avatar */}
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-500 to-blue-500 flex items-center justify-center text-2xl flex-shrink-0">
-                  {testimonial.avatar}
+                
+                {/* Photo */}
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-500 to-blue-500 p-[2px] flex-shrink-0">
+                  <img
+                    src={testimonial.photo}
+                    alt={testimonial.name}
+                    className="w-full h-full rounded-full object-cover bg-slate-900"
+                  />
                 </div>
 
                 {/* Name and Title */}
@@ -95,39 +103,6 @@ function Testimonials() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Trust Badges / Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-fuchsia-500 mb-2">50+</p>
-            <p className="text-slate-400 text-sm">Happy Clients</p>
-          </div>
-          <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-fuchsia-500 mb-2">100%</p>
-            <p className="text-slate-400 text-sm">Satisfaction Rate</p>
-          </div>
-          <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-fuchsia-500 mb-2">1000+</p>
-            <p className="text-slate-400 text-sm">Hours Automated</p>
-          </div>
-          <div className="p-6 bg-slate-900/30 rounded-xl border border-slate-800">
-            <p className="text-4xl font-bold text-fuchsia-500 mb-2">4.9/5</p>
-            <p className="text-slate-400 text-sm">Average Rating</p>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-slate-300 text-lg mb-6">
-            Join our growing list of satisfied clients
-          </p>
-          <a 
-            href="#contact"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-blue-500 text-slate-950 font-bold rounded-lg hover:opacity-90 transition-opacity duration-300 hover:shadow-lg hover:shadow-fuchsia-500/50"
-          >
-            Start Your Success Story
-          </a>
         </div>
 
       </div>

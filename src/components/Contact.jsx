@@ -39,7 +39,7 @@ function Contact() {
   return (
     <section 
       id="contact" 
-      className="py-8 px-4 bg-slate-900/50"
+      className="py-8 px-4 bg-slate-950"
     >
       <div className="max-w-6xl mx-auto">
         
