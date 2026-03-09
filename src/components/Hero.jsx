@@ -55,16 +55,6 @@ function Hero() {
           >
             <FaInstagram className="w-7 md:w-8 h-7 md:h-8" />
           </a>
-
-          <a 
-            href="https://www.tiktok.com/@peggyassists"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 hover:scale-110"
-            aria-label="TikTok"
-          >
-            <FaTiktok className="w-7 md:w-8 h-7 md:h-8" />
-          </a>
         </div>
 
         {/* Scroll Down Indicator */}

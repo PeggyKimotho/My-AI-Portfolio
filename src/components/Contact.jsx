@@ -196,17 +196,6 @@ function Contact() {
                     >
                       <FaLinkedinIn className="w-6 h-6 text-slate-400 group-hover:text-fuchsia-500 transition-colors duration-300" />
                     </a>
-
-                
-
-                    <a
-                      href="https://www.tiktok.com/@peggyassists"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-slate-900/50 rounded-lg border border-slate-800 hover:border-fuchsia-500 hover:bg-fuchsia-500/10 transition-all duration-300 group"
-                    >
-                      <FaTiktok className="w-6 h-6 text-slate-400 group-hover:text-fuchsia-500 transition-colors duration-300" />
-                    </a>
                   </div>
                 </div>
 
